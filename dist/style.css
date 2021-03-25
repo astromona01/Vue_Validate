@@ -1,0 +1,23 @@
+form {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+.clients-group-wrapper {
+  margin-bottom: 55px;
+}
+input, select, .invalid {
+  position: absolute;
+  right: 0;
+}
+.invalid-err {
+  position: absolute;
+  color: red;
+  left: 100%;
+  width: 100%;
+}

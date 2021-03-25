@@ -1,0 +1,98 @@
+#app {
+  max-width: 1536px;
+  margin: 0 auto;
+}
+
+form {
+  width: 43%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+.clients-group-wrapper {
+  margin-bottom: 65px;
+}
+input, select, .invalid {
+  position: absolute;
+  right: 0;
+  width: 40%;
+}
+input, select {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  outline: none;
+  border-radius: 5px;
+}
+input:hover, input:focus, select:hover, select:focus {
+  background: darkgray;
+  color: #fff;
+}
+input[type="checkbox"] {
+  width: initial;
+  right: 37%;
+}
+.invalid-err {
+  position: absolute;
+  color: red;
+  left: 60%;
+  width: 100%;
+  display: block;
+  top: 34px
+}
+.clients-group-err {
+  top: 64px;
+}
+.create-button {
+  width: 150px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #000;
+  margin: 80px auto 0;
+  display: block;
+  transition: background 0.2s, color 0.2s;
+}
+.create-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.create-button:active {
+  background-color: #ccc;
+}
+@media(max-width: 1024px){
+  form {
+    width: 75%;
+  }
+}
+@media(max-width: 769px){
+  form {
+    width: 100%;
+  }
+  .invalid-err {
+    width: 43%;
+    left: 57%;
+  }
+  .clients-group-err {
+    left: 57%;
+  }
+  .wrapper {
+    margin-bottom: 52px;
+  }
+  .clients-group-wrapper {
+    margin-bottom: 79px;
+  }
+  .passport-type-err {
+    width: 46%;
+  }
+  
+  input, select, .invalid {
+    width: 43%;
+  }
+}
