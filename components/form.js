@@ -10,6 +10,7 @@ const MyForm = {
     formMain,
     adress,
     passport,
+    validPrevComponents: null,
   },
   data: () => ({
     
@@ -21,14 +22,16 @@ const MyForm = {
   methods: {
     submitHandler(){
       const components = ['formMain', 'adress', 'passport']
+      this.validPrevComponents = true;
       components.forEach((el, idx) => {
         if (this.$refs[el].$v.$invalid){
           this.$refs[el].$v.$touch()
+          this.validPrevComponents = false;
           return
         }else {
           if (idx !== components.length - 1){
             this.continue
-          }else {
+          }else if (this.validPrevComponents) {
             alert('Новый клиент успешно создан!');
             // this.clearInputs(components)
           }
